@@ -1,0 +1,19 @@
+ux:
+* do not move cursor
+
+
+lua
+* 'hello   -> 'hello|'
+* 'hello'  -> local _ = 'hello|'
+* do       -> do | end
+* for...do -> for...do | end
+* print(   -> print(|)
+* ={       -> ={|}
+* t[       -> t[|]
+* s..'     -> s..'|'
+
+
+zig
+* "hello  -> "hello"
+* "hello" -> "hello";
+* TBD
