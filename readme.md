@@ -3,6 +3,7 @@ try to fix/complete the end for current context/position.
 ## design choices
 * be pragmatic, no 100% correctness guarantee
 * i know nothing about treesitter query, so every pattern is hardcoded
+* no smart/automatic mechanism, must be triggered by user
 
 ## status
 * it is not stable
