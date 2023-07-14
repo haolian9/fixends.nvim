@@ -1,12 +1,14 @@
-try to fix/complete the end for current context/position.
+an example that tries to fix/complete the end for current context/position.
 
 ## design choices
-* be pragmatic, no 100% correctness guarantee
-* i know nothing about treesitter query, so every pattern is hardcoded
-* no smart/automatic mechanism, must be triggered by user
+* be pragmatic, guarantee no 100% correctness
+* every pattern is hardcoded, as i know nothing about queries of treesitter
+* be stupid and lazy, it must be triggered by user
+* treesitter parsers are good, avoid string manipulations ASAP
 
 ## status
 * it is not stable
+* its implementation is ugly
 
 ## supported cases
 
@@ -18,7 +20,7 @@ lua: multiline blocks
 * [x] if..then     -> if..then | end
 * [x] for..do      -> for..do | end
 
-lua: inline pairs
+general: inline pairs
 * [x] '
 * [x] "
 * [x] (
@@ -27,7 +29,7 @@ lua: inline pairs
 * [x] [[
 
 ## prerequisites
-* neovim 0.9.*
+* neovim 0.9.* with treesitter
 * haolian9/squirrel.nvim
 * haolian9/infra.nvim
 
@@ -35,7 +37,7 @@ lua: inline pairs
 my personal config:
 ```
 -- after/ftplugin/lua.vim
-inoremap <buffer> <c-;> <cmd>lua require'fixends'()<cr>
+inoremap <buffer> <c-;> <cmd>lua require'fixends'.lua()<cr>
 ```
 
 ## todo
