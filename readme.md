@@ -1,4 +1,8 @@
+
+**archived: having this for weeks, i have never used it once. it's useless to me.**
+
 an example that tries to fix/complete the end for current context/position.
+
 
 ## design choices
 * be pragmatic, guarantee no 100% correctness
